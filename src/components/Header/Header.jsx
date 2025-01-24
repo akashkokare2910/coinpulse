@@ -1,15 +1,16 @@
 // eslint-disable-next-line
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CryptoDropdown from "../CryptoDropdown";
 import { useDispatch } from "react-redux";
-import { setSelectedCrypto } from "../../redux/CryptoSlice";
+import { setSelectedCrypto } from "../../redux/cryptoSlice";
 import "./Header.css";
 import Logo from "../../assets/coinpulse.png";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleCryptoSelect = (crypto) => {
     dispatch(setSelectedCrypto(crypto));
@@ -17,6 +18,10 @@ const Header = () => {
 
   const handleClick = () => {
     navigate("/");
+  };
+
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
   };
 
   return (
@@ -35,7 +40,14 @@ const Header = () => {
         <div className="ml-4 w-50">
           <CryptoDropdown onCryptoSelect={handleCryptoSelect} />
         </div>
-        <nav className="text-white flex items-center space-x-6">
+        <div className="mobile-menu" onClick={toggleMobileMenu}>
+          <span className="text-white">Menu</span>
+        </div>
+        <nav
+          className={`text-white flex items-center space-x-6 ${
+            showMobileMenu ? "block" : "hidden"
+          }`}
+        >
           <Link
             to="/"
             className="hover:text-gray-300 transition-colors duration-200"
