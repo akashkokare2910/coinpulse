@@ -1,0 +1,38 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  .dashboard-card {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .dashboard-card h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .charts-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 768px) {
+    .charts-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  

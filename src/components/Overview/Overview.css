@@ -1,0 +1,99 @@
+/* Overview Component Styles */
+
+/* Container for the overall layout */
+.overview {
+    padding: 2rem; /* Adds padding around the whole component */
+  }
+  
+  /* Centered Card Container */
+  .overview .card-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Title Styling */
+  .overview h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Grid Layout for Cards (2 columns on larger screens) */
+  .overview .details-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 column by default */
+    gap: 1.5rem;
+  }
+  
+  /* Styling each card */
+  .overview .details-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e5e5;
+  }
+  
+  .overview .details-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+  
+  .overview .details-card strong {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Description Section Styling */
+  .overview .description {
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title for the Description */
+  .overview .description h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text inside description */
+  .overview .description p {
+    color: #777;
+    font-size: 1rem;
+  }
+  
+  /* Loading and Error Messages */
+  .overview .loading,
+  .overview .error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Grid for Small Screens */
+  @media (min-width: 600px) {
+    .overview .details-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens and larger */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .overview .card-container {
+      max-width: 1000px;
+    }
+  }
+  
