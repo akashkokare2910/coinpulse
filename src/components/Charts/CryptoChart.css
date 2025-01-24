@@ -2,61 +2,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .charts-container {
+}
+
+.charts-container {
     display: flex;
     justify-content: space-between;
     width: 100%; 
-  }
-  
-  .crypto-chart-card {
+}
+
+.crypto-chart-card {
     background-color: white;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 48%; /* Adjust width as needed for two charts side-by-side */
-  }
-  
-  .chart-container {
+    width: 100%; /* Adjusted width for smaller screens */
+}
+
+.chart-container {
     height: 300px; /* Set a fixed height for the chart */
-  }
-  
-  .current-price {
+}
+
+.current-price {
     margin-top: 1rem;
-  }
+}
 
-
-
-  .crypto-details-container {
+.crypto-details-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
-  }
-  
-  .crypto-details-card {
+}
+
+.crypto-details-card {
     background-color: white;
     padding: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
-  }
-  
-  .crypto-details-card h3 {
+}
+
+.crypto-details-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  
-  .crypto-details-card ul {
+}
+
+.crypto-details-card ul {
     list-style-type: none;
     padding-left: 0;
-  }
-  
-  .crypto-details-card li {
+}
+
+.crypto-details-card li {
     margin-bottom: 0.75rem;
-  }
-  
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .charts-container {
+        flex-direction: column; /* Stack charts vertically on small screens */
+    }
+
+    .crypto-chart-card {
+        width: 100%; /* Full width for charts on small screens */
+        margin-bottom: 1rem; /* Add space between stacked charts */
+    }
+}
